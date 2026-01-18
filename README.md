@@ -1,2 +1,2 @@
 # Data-Science--Project--InsCostPred
-Data science and machine learning projects using Python. After testing Logistic Regression, Random Forest, XGBoost, and LightGBM models, LightGBM achieved the highest accuracy and best overall performance.
+The Linear Regression model achieved an R² Score of around 0.75–0.77, which is a decent baseline.
