@@ -1,30 +1,28 @@
-# Insurance Claim Prediction
+# Insurance Cost Prediction
 
 ## Problem Statement
-An insurance company wants to predict which customers are likely to file a claim in the next year, so it can price policies more accurately and flag high-risk customers for review.
+Predict the medical insurance cost (charges) for an individual based on personal and health-related attributes, to help understand what factors drive higher insurance costs.
 
 ## Dataset
-- Source: Kaggle — [add your dataset link here]
-- Customer and policy-level data (demographics, vehicle/policy details)
-- Target variable: claim likelihood (1 = will file a claim, 0 = will not)
-- Severe class imbalance in the target variable
+- Source: Insurance cost dataset (Kaggle) — [add your dataset link here]
+- Features: age, sex, BMI, number of children, smoker status, region
+- Target variable: `charges` (medical insurance cost)
 
 ## Approach
-1. Performed extensive data cleaning and EDA to understand feature relationships and imbalance.
-2. Balanced the severe class imbalance using up-sampling.
-3. Trained and evaluated three models: Logistic Regression, Decision Tree, and Random Forest.
-4. Decision Tree delivered the strongest results, with ~97% accuracy in identifying claim-prone customers.
+1. Performed data cleaning and exploratory data analysis (EDA) to understand relationships between features and insurance cost.
+2. Encoded categorical variables (sex, smoker, region) for model input.
+3. Trained a Linear Regression model to predict insurance charges.
+4. Evaluated the model using R² score.
+5. The model achieved an R² score of ~0.75–0.77, a decent baseline for this dataset.
 
 ## Key Insights
-- Decision Tree captured non-linear patterns in the data better than Logistic Regression for this dataset.
-- Careful handling of class imbalance was critical — without up-sampling, the model would simply predict "no claim" for almost every customer and still look accurate.
-- Findings can support risk-based pricing and help the company flag high-risk policyholders early.
+- Smoker status and BMI showed a strong relationship with insurance cost — smokers and higher-BMI individuals tend to have significantly higher charges.
+- Linear Regression gave a reasonable baseline; a tree-based model (Random Forest/XGBoost) could likely improve on this R² by capturing non-linear interactions between features.
+- Findings can help insurers understand key cost drivers when setting premiums.
 
 ## Tech Stack
-Python, Pandas, NumPy, Scikit-learn (Decision Tree, Random Forest, Logistic Regression), Matplotlib/Seaborn
+Python, Pandas, NumPy, Scikit-learn (Linear Regression), Matplotlib/Seaborn
 
 ## How to Run
-```bash
-pip install -r requirements.txt
-jupyter notebook notebook.ipynb
-```
+Open `Insurance Cost Prediction.ipynb` in Jupyter Notebook or Google Colab and run all cells.
+Requires: Python 3.x, pandas, numpy, scikit-learn, matplotlib, seaborn (see Tech Stack above).
