@@ -3,11 +3,6 @@
 ## Problem Statement
 Predict the medical insurance cost (charges) for an individual based on personal and health-related attributes, to help understand what factors drive higher insurance costs.
 
-## Dataset
-- Source: Insurance cost dataset (Kaggle) — [add your dataset link here]
-- Features: age, sex, BMI, number of children, smoker status, region
-- Target variable: `charges` (medical insurance cost)
-
 ## Approach
 1. Performed data cleaning and exploratory data analysis (EDA) to understand relationships between features and insurance cost.
 2. Encoded categorical variables (sex, smoker, region) for model input.
